@@ -7,24 +7,17 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-if (process.env.BROWSER) {
-  require('semantic-ui-css/components/container.css');
-}
-
-
 import React, {PropTypes} from 'react';
 import cx from 'classnames';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Navigation.css';
+import s from '../../src/components/Navigation/Navigation.css';
 import Link from '../Link';
 
-//require('semantic-ui-css/components/menu.css');
-
+require('semantic-ui-css/components/container.css');
 
 function Navigation({className}) {
   return (
     <div className={cx(s.root, className)} role="navigation">
-
       <Link className={s.link} to="/about">About</Link>
       <Link className={s.link} to="/contact">Contact</Link>
       <span className={s.spacer}> | </span>

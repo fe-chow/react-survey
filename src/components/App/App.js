@@ -7,7 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 import emptyFunction from 'fbjs/lib/emptyFunction';
 import s from './App.css';
 import Header from '../Header';
@@ -42,7 +42,7 @@ class App extends Component {
   }
 
   componentWillMount() {
-    const { insertCss } = this.props.context;
+    const {insertCss} = this.props.context;
     this.removeCss = insertCss(s);
   }
 
@@ -52,7 +52,7 @@ class App extends Component {
 
   render() {
     return !this.props.error ? (
-      <div>
+      <div >
         <Header />
         {this.props.children}
         <Feedback />
